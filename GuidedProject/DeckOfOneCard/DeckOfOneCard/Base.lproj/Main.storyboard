@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdK-M3-aBE">
+                                <rect key="frame" x="259" y="20" width="82" height="30"/>
+                                <state key="normal" title="Draw a card"/>
+                                <connections>
+                                    <action selector="drawCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MxL-QE-w4w"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J3s-CL-XYy">
+                                <rect key="frame" x="167" y="100" width="266" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="2TA-oh-Bz5"/>
+                                    <constraint firstAttribute="width" secondItem="J3s-CL-XYy" secondAttribute="height" multiplier="2:3" id="k2E-Ar-FBr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J3s-CL-XYy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MEB-yO-0Pw"/>
+                            <constraint firstItem="J3s-CL-XYy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UIk-et-Wiw"/>
+                            <constraint firstItem="kdK-M3-aBE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bec-6g-za6"/>
+                            <constraint firstItem="J3s-CL-XYy" firstAttribute="top" secondItem="kdK-M3-aBE" secondAttribute="bottom" constant="50" id="mID-lU-tHC"/>
+                            <constraint firstItem="kdK-M3-aBE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ngj-ad-vMj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="J3s-CL-XYy" id="cCZ-9o-bKb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="315" y="387"/>
         </scene>
     </scenes>
 </document>

@@ -2,28 +2,18 @@
 
 import UIKit
 
-enum Money {
-    case dollar
-    case quarter
-    case dime
-    case nickel
-    case penny
-}
-
-let moneyString = "Your change is"
 
 func makeChange(money: Double) -> String {
     
-    for int in money {
-        switch Money {
-        case .dollar:
-            <#code#>
-        default:
-            break
-        }
-    }
+    let centsChange = Int(money * 100)
+    let dollars = centsChange / 100
+    let quarters = (centsChange - dollars * 100) / 25
+    let dimes = (centsChange - dollars * 100 - quarters * 25) / 10
+    let nickels = (centsChange - dollars * 100 - quarters * 25 - dimes * 10) / 5
+    let pennies = centsChange % 5
     
-    return moneyString
+    return "Your change is \(dollars) dollars, \(quarters) quarters, \(dimes) dimes, \(nickels) nickels, and \(pennies) pennies."
+    
 }
 
-makeChange(4.68)
+print(makeChange(4.68))

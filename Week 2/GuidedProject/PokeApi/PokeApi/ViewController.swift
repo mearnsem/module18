@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  ChuckNorrisFacts
+//  PokeApi
 //
 //  Created by Emily Mearns on 6/6/16.
 //  Copyright © 2016 Emily Mearns. All rights reserved.

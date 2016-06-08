@@ -21,7 +21,7 @@ class StarshipViewController: UIViewController, UISearchBarDelegate {
 
     }
 
-    func searchBarSearchButton(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         guard let searchTerm = searchBar.text else {return}
         StarshipController.getStarship(searchTerm) { (starship) in
             self.nameLabel.text = starship?.name

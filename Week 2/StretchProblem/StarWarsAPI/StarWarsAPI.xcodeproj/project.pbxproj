@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		408AD6B51D086BEB009DFC93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AD6B41D086BEB009DFC93 /* AppDelegate.swift */; };
-		408AD6B71D086BEB009DFC93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AD6B61D086BEB009DFC93 /* ViewController.swift */; };
 		408AD6BA1D086BEB009DFC93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408AD6B81D086BEB009DFC93 /* Main.storyboard */; };
 		408AD6BC1D086BEB009DFC93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408AD6BB1D086BEB009DFC93 /* Assets.xcassets */; };
 		408AD6BF1D086BEB009DFC93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408AD6BD1D086BEB009DFC93 /* LaunchScreen.storyboard */; };
+		408AD6C71D086CEF009DFC93 /* StarshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AD6C61D086CEF009DFC93 /* StarshipViewController.swift */; };
+		408AD6C91D086D29009DFC93 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AD6C81D086D29009DFC93 /* Starship.swift */; };
+		408AD6CB1D086D34009DFC93 /* StarshipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AD6CA1D086D34009DFC93 /* StarshipController.swift */; };
+		408AD6CD1D086D5A009DFC93 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AD6CC1D086D5A009DFC93 /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		408AD6B11D086BEB009DFC93 /* StarWarsAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408AD6B41D086BEB009DFC93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		408AD6B61D086BEB009DFC93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		408AD6B91D086BEB009DFC93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		408AD6BB1D086BEB009DFC93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		408AD6BE1D086BEB009DFC93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		408AD6C01D086BEB009DFC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408AD6C61D086CEF009DFC93 /* StarshipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipViewController.swift; sourceTree = "<group>"; };
+		408AD6C81D086D29009DFC93 /* Starship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		408AD6CA1D086D34009DFC93 /* StarshipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipController.swift; sourceTree = "<group>"; };
+		408AD6CC1D086D5A009DFC93 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +60,13 @@
 		408AD6B31D086BEB009DFC93 /* StarWarsAPI */ = {
 			isa = PBXGroup;
 			children = (
-				408AD6B41D086BEB009DFC93 /* AppDelegate.swift */,
-				408AD6B61D086BEB009DFC93 /* ViewController.swift */,
 				408AD6B81D086BEB009DFC93 /* Main.storyboard */,
+				408AD6C81D086D29009DFC93 /* Starship.swift */,
+				408AD6CA1D086D34009DFC93 /* StarshipController.swift */,
+				408AD6C61D086CEF009DFC93 /* StarshipViewController.swift */,
+				408AD6CC1D086D5A009DFC93 /* NetworkController.swift */,
 				408AD6BB1D086BEB009DFC93 /* Assets.xcassets */,
+				408AD6B41D086BEB009DFC93 /* AppDelegate.swift */,
 				408AD6BD1D086BEB009DFC93 /* LaunchScreen.storyboard */,
 				408AD6C01D086BEB009DFC93 /* Info.plist */,
 			);
@@ -135,7 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				408AD6B71D086BEB009DFC93 /* ViewController.swift in Sources */,
+				408AD6CD1D086D5A009DFC93 /* NetworkController.swift in Sources */,
+				408AD6C91D086D29009DFC93 /* Starship.swift in Sources */,
+				408AD6CB1D086D34009DFC93 /* StarshipController.swift in Sources */,
+				408AD6C71D086CEF009DFC93 /* StarshipViewController.swift in Sources */,
 				408AD6B51D086BEB009DFC93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

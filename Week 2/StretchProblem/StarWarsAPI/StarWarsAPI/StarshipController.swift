@@ -24,7 +24,7 @@ class StarshipController {
                 return
             }
             
-            dispatch_async(dispatch_get_main_queue(), { 
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 let starship = Starship(dictionary: starshipDictionary)
                 completion(starship: starship)
             })

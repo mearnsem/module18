@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StarshipViewController: UIViewController {
+class StarshipViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,7 +21,7 @@ class StarshipViewController: UIViewController {
 
     }
 
-    func searchBarSearchButton(sender: UISearchBar) {
+    func searchBarSearchButton(searchBar: UISearchBar) {
         guard let searchTerm = searchBar.text else {return}
         StarshipController.getStarship(searchTerm) { (starship) in
             self.nameLabel.text = starship?.name

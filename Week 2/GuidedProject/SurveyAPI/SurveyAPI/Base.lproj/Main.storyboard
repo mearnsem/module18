@@ -1,25 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6ls-gU-oWX">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Survey View Controller-->
+        <scene sceneID="Lg5-oR-m8E">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8nC-7t-z3t" customClass="SurveyViewController" customModule="SurveyAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="2py-xI-dtX"/>
+                        <viewControllerLayoutGuide type="bottom" id="5FF-MC-jDN"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="9wD-VD-wqr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMu-5d-8HS">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who will win the NBA Finals?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0T-D5-P1d">
+                                <rect key="frame" x="20" y="110" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who should be Finals MVP?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z25-9K-pSv">
+                                <rect key="frame" x="20" y="148" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt1-Fg-pUE">
+                                <rect key="frame" x="276" y="186" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitBtnPressed:" destination="8nC-7t-z3t" eventType="touchUpInside" id="7aT-pg-dKv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kt1-Fg-pUE" firstAttribute="top" secondItem="Z25-9K-pSv" secondAttribute="bottom" constant="8" symbolic="YES" id="5Rb-Wo-ZM0"/>
+                            <constraint firstItem="sMu-5d-8HS" firstAttribute="trailing" secondItem="9wD-VD-wqr" secondAttribute="trailingMargin" id="94S-of-4jv"/>
+                            <constraint firstItem="A0T-D5-P1d" firstAttribute="trailing" secondItem="Z25-9K-pSv" secondAttribute="trailing" id="BpC-re-Cyv"/>
+                            <constraint firstItem="sMu-5d-8HS" firstAttribute="top" secondItem="2py-xI-dtX" secondAttribute="bottom" constant="8" symbolic="YES" id="N0j-z9-z0f"/>
+                            <constraint firstItem="A0T-D5-P1d" firstAttribute="leading" secondItem="Z25-9K-pSv" secondAttribute="leading" id="Oaq-DF-APF"/>
+                            <constraint firstItem="Z25-9K-pSv" firstAttribute="centerX" secondItem="Kt1-Fg-pUE" secondAttribute="centerX" id="bDF-EK-ase"/>
+                            <constraint firstItem="sMu-5d-8HS" firstAttribute="leading" secondItem="9wD-VD-wqr" secondAttribute="leadingMargin" id="dIW-3L-EZm"/>
+                            <constraint firstItem="sMu-5d-8HS" firstAttribute="leading" secondItem="A0T-D5-P1d" secondAttribute="leading" id="ngs-n3-yhW"/>
+                            <constraint firstItem="Z25-9K-pSv" firstAttribute="top" secondItem="A0T-D5-P1d" secondAttribute="bottom" constant="8" symbolic="YES" id="qRi-2j-CIl"/>
+                            <constraint firstItem="sMu-5d-8HS" firstAttribute="trailing" secondItem="A0T-D5-P1d" secondAttribute="trailing" id="qc6-TU-p4c"/>
+                            <constraint firstItem="A0T-D5-P1d" firstAttribute="top" secondItem="sMu-5d-8HS" secondAttribute="bottom" constant="8" symbolic="YES" id="xvk-0n-3Qn"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hI0-Fv-3Gh"/>
+                    <connections>
+                        <outlet property="championLabel" destination="A0T-D5-P1d" id="YKw-ah-uu8"/>
+                        <outlet property="mvpLabel" destination="Z25-9K-pSv" id="xDX-Qr-KTQ"/>
+                        <outlet property="nameLabel" destination="sMu-5d-8HS" id="EYw-X2-5BL"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ni-xB-B3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1142" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ztd-ZZ-ghM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ls-gU-oWX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lcz-OQ-3S6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8nC-7t-z3t" kind="relationship" relationship="rootViewController" id="e7a-ha-8Pe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7v9-BI-wTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="387"/>
         </scene>
     </scenes>
 </document>
